@@ -8,9 +8,7 @@
 	</head>
 	<body ng-app="pokedex">
     <div ng-controller="PokemonController">
-			<ul ng-repeat="pkmn in pokemon">
-				<li>Number: {{pkmn.id}} Name: {{pkmn.name}}</li>
-			</ul>
+			<select ng-model="selectedPokemon" ng-options="pkmn.name for pkmn in pokemon"> </select>
 		</div>
 	</body>
 </html>
