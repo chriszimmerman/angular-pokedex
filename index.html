@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html data-ng-app="pokedex">
+<head>
+    <title>Pokedex</title>
+    <script type="text/javascript" src="lib/angular-1.3.13/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-1.3.13/angular-route.min.js"></script>
+    <script type="text/javascript" src="app/pokemon.js"></script>
+</head>
+<body>
+    <div data-ng-controller="PokemonController">
+        <ul data-ng-repeat="pkmn in pokemon">
+			<li>Number: {{pkmn.num}} Name: {{pkmn.en}}</li>
+        </ul>
+    </div>
+</body>
+</html>
