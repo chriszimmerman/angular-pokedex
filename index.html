@@ -8,7 +8,10 @@
 	</head>
 	<body ng-app="pokedex">
     <div ng-controller="PokemonController">
-			<select ng-model="selectedPokemon" ng-options="pkmn.name for pkmn in pokemon"> </select>
+			<div>
+				<select ng-model="selectedPokemon" ng-options="pkmn.name for pkmn in pokemon"> </select>
+			</div>
+			<img src="{{selectedPokemon.img}}"/>
 		</div>
 	</body>
 </html>
