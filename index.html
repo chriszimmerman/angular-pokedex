@@ -2,16 +2,30 @@
 <html>
 	<head>
     <title>Pokedex</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"></link>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css"></link>
     <script type="text/javascript" src="lib/angular-1.3.13/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-1.3.13/angular-route.min.js"></script>
     <script type="text/javascript" src="app/pokemon.js"></script>
 	</head>
-	<body ng-app="pokedex">
-    <div ng-controller="PokemonController">
-			<div>
-				<select ng-model="selectedPokemon" ng-options="pkmn.name for pkmn in pokemon"> </select>
+	<body ng-app="pokedex" ng-controller="PokemonController">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Pokedex</a>
+          <div class="nav-collapse collapse">
+            <div class="navbar-text pull-right">
+							<select ng-model="selectedPokemon" ng-options="pkmn.name for pkmn in pokemon"> </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<div class="container" role="content">
+			<div class="starter-template">
+				<img src="{{selectedPokemon.img}}"/>
 			</div>
-			<img src="{{selectedPokemon.img}}"/>
 		</div>
 	</body>
 </html>
