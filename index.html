@@ -24,8 +24,15 @@
 
 		<div class="container" role="content">
 			<div class="starter-template">
+				<h1>No. {{selectedPokemon.id}} - {{selectedPokemon.name}}</h1>
 				<img src="{{selectedPokemon.img}}"/>
 			</div>
+			<aside>
+				<h3>Type(s)</h3>
+				<ul>
+					<li ng-repeat="type in selectedPokemon.type">{{type}}</li>
+				</ul>
+			</aside>
 		</div>
 	</body>
 </html>
